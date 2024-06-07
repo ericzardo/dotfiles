@@ -73,7 +73,7 @@ ZSH_CUSTOM=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git spaceship-vi-mode ssh-agent)
+plugins=(git ssh-agent)
 
 export RPS1="%{$reset_color%}"
 export PATH="$HOME/bin:$PATH"
