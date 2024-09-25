@@ -88,7 +88,7 @@ plugins=(git ssh-agent)
 
 export RPS1="%{$reset_color%}"
 export PATH="$HOME/bin:$PATH"
-export ANDROID_HOME=$HOME/Android
+export ANDROID_HOME=$HOME/.Android
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
