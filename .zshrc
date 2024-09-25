@@ -6,6 +6,17 @@ cd ~
 # Path to your oh-my-zsh installation.
 export ZSH="/home/zardo/.oh-my-zsh"
 
+function change_sys {
+  if [ "$(pwd)" = "/home/zardo" ]; then
+      cd /mnt/c/Users/Eric\ Zardo || return
+      echo "Changed to Windows directory"
+  else
+      cd /home/zardo || return
+      echo "Changed to Linux directory"
+  fi
+}
+
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -77,6 +88,9 @@ plugins=(git ssh-agent)
 
 export RPS1="%{$reset_color%}"
 export PATH="$HOME/bin:$PATH"
+export ANDROID_HOME=$HOME/Android
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,7 +118,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias list_images='python3 ~/.scripts/list_images.py'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
