@@ -88,9 +88,12 @@ plugins=(git ssh-agent)
 
 export RPS1="%{$reset_color%}"
 export PATH="$HOME/bin:$PATH"
-export ANDROID_HOME=$HOME/.Android
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+export ANDROID_HOME="/mnt/c/Users/Eric Zardo/AppData/Local/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 source $ZSH/oh-my-zsh.sh
 
